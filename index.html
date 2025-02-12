@@ -1,43 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>"La sazon de Virginia"</title>
+    <title>La Sazón de Virginia</title>
+    
+    <!-- Vinculando Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
     <style>
         /* Estilos básicos */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ade80a;
-            color: #0b180b;
+            background-color: #f7f7f7;
+            color: #333;
         }
 
         header {
-            background-color: #abf021;
+            background-color: #ff8c00; /* Naranja más suave */
             color: white;
-            padding: 10px 0;
+            padding: 30px 0;
             text-align: center;
+            font-family: 'Lora', serif;
         }
 
         header h1 {
             margin: 0;
-            font-size: 36px;
+            font-size: 40px;
         }
 
         nav {
-            background-color: #20ad90;
-            padding: 10px 0;
+            background-color: #2e8b57;
+            padding: 15px 0;
             text-align: center;
         }
 
         nav a {
             color: white;
-            margin: 0 20px;
-            text-decoration: red;
+            margin: 0 25px;
+            text-decoration: none;
             font-size: 18px;
+            font-weight: 500;
         }
 
         nav a:hover {
@@ -47,38 +53,49 @@
         .hero {
             background-image: url("mifondo.png");
             background-size: cover;
-            height: 400px;
+            background-position: center;
+            height: 500px;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: rgb(25, 7, 7);
-            font-size: 40px;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            font-size: 50px;
+            font-family: 'Lora', serif;
         }
 
         .menu, .about, .contact {
-            padding: 40px 20px;
+            padding: 60px 20px;
             text-align: center;
+            background-color: #ffffff;
         }
 
         .menu h2, .about h2, .contact h2 {
-            color: #333;
-            font-size: 30px;
+            color: #2e8b57;
+            font-size: 36px;
+            font-family: 'Lora', serif;
         }
 
         .menu-items {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             flex-wrap: wrap;
+            margin-top: 40px;
         }
 
         .menu-item {
-            background-color: rgb(233, 94, 2);
+            background-color: #ff8c00;
             padding: 20px;
             width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
         }
 
         .menu-item img {
@@ -89,25 +106,34 @@
 
         .menu-item h3 {
             margin-top: 15px;
-            font-size: 20px;
+            font-size: 22px;
         }
 
         .footer {
-            background-color: #e60b0b;
+            background-color: #2e8b57;
             color: white;
             text-align: center;
-            padding: 20px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 25px 0;
+        }
+
+        @media (max-width: 768px) {
+            .menu-items {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu-item {
+                width: 80%;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
-<hr><hr>
 
+<body>
     <!-- Header -->
     <header>
-        <font face="arial" size="40"> "La sazon de Virginia"</font>
+        <h1>La Sazón de Virginia</h1>
     </header>
 
     <!-- Navegación -->
@@ -120,7 +146,14 @@
 
     <!-- Hero Image -->
     <section class="hero">
-        <div><font face="times new roman" size="30">  LA MEJOR GASTRONOMIA QUEVEDEÑA</font></div>
+        <h2>Bienvenidos a la auténtica cocina ecuatoriana</h2>
+    </section>
+
+    <!-- Bienvenida -->
+    <section class="menu" id="menu">
+        <h2>Te damos la bienvenida a "La Sazón de Virginia"</h2>
+        <p><font face="times new roman" size="5">¿Buscas una experiencia gastronómica única?</p></font>
+        <p><font face="times new roman" size="5">Te invitamos a visitar nuestro restaurante, donde fusionamos tradición, calidad y un ambiente cálido.</p></font>
     </section>
 
     <!-- Menú -->
@@ -128,90 +161,84 @@
         <h2>Menú</h2>
         <div class="menu-items">
             <div class="menu-item">
-                <img src="booo.jpeg" alt="Plato 1">
-                <h3>bollo de tilapia</h3>
-                <p>descubre el delicioso sabor y textura de el bollo de tilapia </p>
+                <img src="booo.jpeg" alt="Bollo de Tilapia">
+                <h3>Bollo de Tilapia</h3>
+                <p><font face="times new roman" size="5">Delicioso bollo relleno con tilapia fresca</p></font>
                 <p>$2.75</p>
             </div>
             <div class="menu-item">
-                <img src="opp.jpeg" alt="Plato 2">
-                <h3>bollo de albacora con Camarón</h3>
-                <p>Un toque refrescante con limones y a comer</p>
+                <img src="opp.jpeg" alt="Bollo de Albacora con Camarón">
+                <h3>Bollo de Albacora con Camarón</h3>
+                <p><font face="times new roman" size="5">Relleno de camarones y albacora</p></font>
                 <p>$2.75</p>
             </div>
             <div class="menu-item">
-                <img src="descarga.jpg" alt="Plato 3">
-                <h3>bollos de boca chico</h3>
-                <p>un sabor unico y tradicional</p>
-                <br>
+                <img src="descarga.jpg" alt="Bollo de Boca Chico">
+                <h3>Bollo de Boca Chico</h3>
+                <p><font face="times new roman" size="5">Un sabor tradicional ecuatoriano y muy delicioso</p></font>
                 <p>$3.50</p>
             </div>
-            <div class="menu-item">
+             <div class="menu-item">
                 <img src="Receta para hacer paches guatemaltecos.jpg" alt="Plato 4">
-                <h3>bollo de chancho</h3>
-                <p>esta rellena de carne suave y jugosa</p>
+                <h3>Bollo de chancho</h3>
+                <p><font face="times new roman" size="5">Esta rellena de carne suave y jugosa</p></font>
                 <p>$2.75</p>
             </div>
             <div class="menu-item">
                 <img src="Bollos de pescado _ Recetas Ecuatorianas _ Laylita_com.jpg" alt="Plato 5">
-                <h3>bollo de mondogo</h3>
-                <p>prueva su textura suave y deliciosa </p>
+                <h3>Bollo de mondogo</h3>
+                <p><font face="times new roman" size="5">Prueva su textura suave y deliciosa </p></font>
                 <br>
                 <p>$2.75</p>
             </div>
             <div class="menu-item">
                 <img src="Menú.jpg" alt="Plato 6">
-                <h3>tonga</h3>
-                <p>Una delicia ecuatoria que debes probar</p>
+                <h3>Tonga</h3>
+                <p><font face="times new roman" size="5">Una delicia ecuatoria que debes probar, no te lo pierdas</p></font>
                 <p>$5.00</p>
             </div>
             <div class="menu-item">
                 <img src="RECETA_ Tortillas de maíz _ Manta Online (1).jpg" alt="Plato 7">
-                <h3>tortillas de maiz</h3>
-                <p>tenemos de chicharon, queso y dulce</p>
+                <h3>Tortillas de maiz</h3>
+                <p><font face="times new roman" size="5">Tenemos de chicharon, queso y dulce</p></font>
                 <br>
                 <p>$1</p>
             </div>
+
+
         </div>
     </section>
 
     <!-- Sobre Nosotros -->
     <section class="about" id="about">
         <h2>Sobre Nosotros</h2>
-      <center><font face="times new roman" size="15">Todo comenzó cuando surgió la necesidad de generar ingresos.
-            Mi abuela, desde una edad temprana, inició el negocio de los bollos,
-            influenciada por la tradición familiar, ya que su familia se dedicaba
-            a la elaboración de bollos. Inicialmente, comenzaron a vender tortillas
-            de maíz en un pequeño puesto en la ciudad. A medida que el negocio fue
-            prosperando, vieron la necesidad de contar con un local propio, lo que
-            permitió expandir la oferta de productos.
-En sus primeros días, los bollos que ofrecían eran exclusivamente de pescado. Con el tiempo,
-            la aceptación del público creció y la gente comenzó a disfrutar de la comida preparada
-            por mi abuela. El negocio prosperó, y su puesto se ubicó en la esquina de
-            la calle principal, 7 de Octubre, donde continuaron ofreciendo sus productos.
-            Con el paso del tiempo, diversificaron la oferta, incorporando bollos de chancho,
-            camarón y diferentes tipos de pescado.
-Ante el creciente éxito, se vio la necesidad de abrir un local propio, lo que permitió ampliar 
-            aún más la variedad de productos. Así, se establecieron en la calle 7 de Octubre, 
-            en el sector conocido como "Décima Primera de 7 de Octubre", en  donde continúan ofreciendo 
-            los mismos productos de calidad que los han hecho reconocidos.</font></center>
-                 <img src="5t5.jpg" >
+        <center><font face="times new roman" size="5">Todo inició en los siglos 90 donde existe una persona llamada Aurelio y y empezaron un
+             local donde poco a poco fueron ganaron probabilidad pero después los municipales tuvieron
+              un problema y nos mandaron a la calle entonces solo existía el fogón donde tenían las
+               tortillas de ahí Aurelio ahí se le pegó a mi abuela Virginia Aurelio donde ellos sacaron 
+               encima su negocio y mi abuela empezó a hacer los bollos Y ahora él yo empezó a hacer las
+                tortillas poco a poco fueron ganando fama y la demanda la necesitaba tener un local Entonces
+                 ellos pusieron un bloque en la esquinita en la 7 de octubre en la principal y de ahí poco a 
+                 poco fueron en la popularidad de la final los votaron de ahí otra vez y está en un local más adentro</center></font>
+                <br>
 
+        <img src="5t5.jpg" alt="Historia del Restaurante">
     </section>
-    <hr><hr>
 
     <!-- Contacto -->
     <section class="contact" id="contact">
         <h2>Contacto</h2>
-        <p>Dirección:<b> DECIMA PRIMERA ENTRE 7 DE OCTUBRE Y JUNE GUZMAN, QUEVEDO,LOS RIOS</b></p>
-        <p>Tel:<b> (123) 456-7890</b></p>
-        <p>visita nuestro local</p>
+        <p><font face="times new roman" size="5">Dirección: 7 de octubre, Ciudad de Quevedo, Los Ríos</p></font>
+        <p><font face="times new roman" size="5">Teléfono: (123) 456-7890</p></font>
+        <p><font face="times new roman" size="5">Email: contacto@lasazondevirginia.com</p></font>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Restaurante La sazon de Virginia.</p>
+        <p>&copy; 2025 Restaurante La Sazón de Virginia.</p>
     </footer>
+</body>
+</html>
 </hr></hr>
 
 </body>
